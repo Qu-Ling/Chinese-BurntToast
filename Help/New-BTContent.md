@@ -1,23 +1,22 @@
 # New-BTContent
 
-## SYNOPSIS
+## 作用
+创建一个新的Toast内容对象。
 
-Creates a new Toast Content object.
-
-## SYNTAX
+## 语法
 
 ```powershell
 New-BTContent [[-Actions] <IToastActions>] [[-ActivationType] <ToastActivationType>] [[-Audio] <ToastAudio>]
  [[-Duration] <ToastDuration>] [[-Launch] <String>] [[-Scenario] <ToastScenario>] [-Visual] <ToastVisual>
 ```
 
-## DESCRIPTION
+## 描述
 
-The New-BTContent function creates a new Toast Content object which is the Base Toast element, which contains at least a visual element.
+New-BTContent 函数会创建一个新的Toast内容对象，该对象是基本元素，且至少包含一个视觉元素。
 
-## EXAMPLES
+## 案例
 
-### -------------------------- EXAMPLE 1 --------------------------
+### -------------------------- 案例 1 --------------------------
 
 ```powershell
 PS C:\>$binding1 = New-BTBinding -Children $text1, $text2 -AppLogoOverride $image2
@@ -25,23 +24,22 @@ PS C:\>$visual1 = New-BTVisual -BindingGeneric $binding1
 PS C:\>$content1 = New-BTContent -Visual $visual1
 ```
 
-This example combines numerous objects created via BurntToast functions into a binding, then a visual element and finally into a content object.
+此案例将通过 BurntToast 函数创建的大量对象合并到一个绑定中，然后是一个可视元素，最后合并到一个内容对象中。
 
-The resultant object can now be displayed using the Submit-BTNotification function.
 
-### -------------------------- EXAMPLE 2 --------------------------
+### -------------------------- 案例 2 --------------------------
 
 ```powershell
 PS C:\>$content1 = New-BTContent -Visual $visual1 -ActivationType Protocol -Launch 'https://google.com'
 ```
 
-This command takes a pre-existing visual object and also specifies options required to launch a browser on the Google homepage when clicking the toast.
+此命令采用预先存在的视觉对象，并指定在单击 toast 时在 Google 主页上启动浏览器所需的选项。
 
-## PARAMETERS
+## 参数
 
 ### -Actions
 
-Optionally create custom actions with buttons and inputs (New-BTAction.)
+（可选）使用按钮和输入创建自定义操作 （由New-BTAction生成对象.）
 
 ```yaml
 Type: IToastActions
@@ -57,7 +55,7 @@ Accept wildcard characters: False
 
 ### -ActivationType
 
-Specifies what activation type will be used when the user clicks the body of this Toast.
+指定当用户单击此Toast的正文时将使用的激活类型。
 
 ```yaml
 Type: ToastActivationType
@@ -74,7 +72,7 @@ Accept wildcard characters: False
 
 ### -Audio
 
-Specify custom audio options (New-BTAudio.)
+指定自定义音频选项 （New-BTAudio.）
 
 ```yaml
 Type: ToastAudio
@@ -90,7 +88,7 @@ Accept wildcard characters: False
 
 ### -Duration
 
-The amount of time the Toast should display. You typically should use the Scenario attribute instead, which impacts how long a Toast stays on screen.
+Toast 应显示的时间。通常应该使用 Scenario 属性，因为该属性会影响 Toast 在屏幕上停留的时间。
 
 ```yaml
 Type: ToastDuration
@@ -107,7 +105,7 @@ Accept wildcard characters: False
 
 ### -Header
 
-New in Creators Update: Specifies an optional header for the toast notification (New-BTHeader.)
+创意者更新中的新增功能：指定 toast 通知的可选标头 （New-BTHeader.）
 
 ```yaml
 Type: ToastHeader
@@ -123,7 +121,7 @@ Accept wildcard characters: False
 
 ### -Launch
 
-A string that is passed to the application when it is activated by the Toast. The format and contents of this string are defined by the app for its own use. When the user taps or clicks the Toast to launch its associated app, the launch string provides the context to the app that allows it to show the user a view relevant to the Toast content, rather than launching in its default way.
+当应用程序被 Toast 激活时传递给应用程序的字符串。此字符串的格式和内容由应用程序定义，供其自己使用。当用户点击或单击 Toast 以启动其关联的应用程序时，启动字符串会为应用程序提供上下文，使应用程序能够向用户显示与 Toast 内容相关的视图，而不是以默认方式启动。
 
 ```yaml
 Type: String
@@ -139,7 +137,7 @@ Accept wildcard characters: False
 
 ### -Scenario
 
-Specify the scenario, to make the Toast behave like an alarm, reminder, or more.
+指定方案，使 Toast 的行为类似于闹钟、提醒等。
 
 ```yaml
 Type: ToastScenario
@@ -156,7 +154,7 @@ Accept wildcard characters: False
 
 ### -Visual
 
-Specify the visual element object, created with the New-BTVisual function.
+指定使用 New-BTVisual 函数创建的可视元素对象。
 
 ```yaml
 Type: ToastVisual

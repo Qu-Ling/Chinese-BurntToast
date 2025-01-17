@@ -2,7 +2,7 @@
 
 ## 作用
 
-为气泡通知创建一个新的图像元素。
+为Toast通知创建一个新的图像元素。
 
 ## 语法
 
@@ -28,7 +28,7 @@ New-BTImage [-Source <String>] [-AlternateText <String>] [-HeroImage] [-AddImage
 
 ## 描述
 
-New-BTImageElement 函数为气泡通知创建一个新的图像元素。
+New-BTImageElement 函数为Toast通知创建一个新的图像元素。
 
 你可以使用 New-BTImageElement 的参数来指定源图像、备用文本、在 Toast 通知中的放置位置和裁剪形状。
 
@@ -40,7 +40,7 @@ New-BTImageElement 函数为气泡通知创建一个新的图像元素。
 PS C:\>$image1 = New-BTImage -Source 'C:\Media\BurntToast.png'
 ```
 
-此命令创建一个标准图像对象，用于包含在 气泡 的主体中。
+此命令创建一个标准图像对象，用于包含在 Toast 的主体中。
 
 ### -------------------------- 案例 2 --------------------------
 
@@ -48,7 +48,7 @@ PS C:\>$image1 = New-BTImage -Source 'C:\Media\BurntToast.png'
 PS C:\>$image2 = New-BTImage -Source 'C:\Media\BurntToast.png' -AppLogoOverride -Crop Circle
 ```
 
-此命令创建一个图像对象，作为气泡中左边的图片，裁剪成圆形。
+此命令创建一个图像对象，作为Toast中左边的图片，裁剪成圆形。
 
 ### -------------------------- 案例 3 --------------------------
 
@@ -56,7 +56,7 @@ PS C:\>$image2 = New-BTImage -Source 'C:\Media\BurntToast.png' -AppLogoOverride 
 PS C:\>$image3 = New-BTImage -Source 'C:\Media\BurntToast.png' -HeroImage
 ```
 
-此命令创建一个图像，用作 气泡 的主页图像。
+此命令创建一个图像，用作 Toast 的主页图像。
 
 ## 参数
 
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 
 ### -Align 水平对齐图片
 
-图像的水平对齐方式。对于 气泡 通知，仅在位于分组内时支持此设置（尚未实现。）
+图像的水平对齐方式。对于 Toast 通知，仅在位于分组内时支持此设置（尚未实现。）
 
 The horizontal alignment of the image. For Toast, this is only supported when inside a group (not yet implemented.)
 
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 
 图像的描述，适用于辅助技术的用户。
 
-（编译著：-AlternateText 参数用于指定当图片由于大小或其他原因无法显示时，气泡通知会显示该参数输入的替代文本。）
+（翻译著：-AlternateText 参数用于指定当图片由于大小或其他原因无法显示时，Toast通知会显示该参数输入的替代文本。）
 
 A description of the image, for users of assistive technologies.
 
@@ -121,8 +121,8 @@ Accept wildcard characters: False
 
 ### -AppLogoOverride
 
-指定将图像用作 气泡 上的图标。
-（编译著：-AppLogoOverride 参数不是BurntToast通知库的标准参数。如果你想要使用自定义图标，应该使用 -AppLogo 参数）
+指定将图像用作 Toast 上的图标。
+（翻译著：-AppLogoOverride 参数不是BurntToast通知库的标准参数。如果你想要使用自定义图标，应该使用 -AppLogo 参数）
 
 Specifies that the image is to be used as the logo on the toast.
 
@@ -140,9 +140,9 @@ Accept wildcard characters: False
 
 ### -Crop 裁剪形状
 
-控制所需的图像裁剪。自Windows10周年更新以来在 气泡 上受支持
+控制所需的图像裁剪。自Windows10周年更新以来在 Toast 上受支持
 
-（编译著：截止目前翻译版本貌似没有什么用？）
+（翻译著：截止目前翻译版本貌似没有什么用？）
 
 Control the desired cropping of the image. Supported on Toast since Anniversary Update.
 
@@ -161,7 +161,7 @@ Accept wildcard characters: False
 
 ### -HeroImage 主页图片
 
-指定将图像用作 气泡 上的主图图像。
+指定将图像用作 Toast 上的主图图像。
 
 Specifies that the image is to be used as the hero image on the toast.
 

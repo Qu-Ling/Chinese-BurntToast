@@ -2,7 +2,7 @@
 
 ## 作用
 
-为气泡通知创建一个新的进度条元素。
+为Toast通知创建一个新的进度条元素。
 
 ## 语法
 
@@ -20,7 +20,7 @@ New-BTProgressBar [-Title <String>] -Status <String> -Indeterminate [-ValueDispl
 
 ## 描述
 
-New-BTProgressBar 函数为 气泡通知 创建一个新的进度条元素。
+New-BTProgressBar 函数为 Toast通知 创建一个新的进度条元素。
 
 必须指定进度条的状态（status）和值（-value 或 --Indeterminate），还可以选择性地给进度条添加标题并覆盖进度的自动文本表示。
 

@@ -1,19 +1,19 @@
 # New-BTVisual
 
-## SYNOPSIS
+## 作用
 
-Creates a new visual element for toast notifications.
+为 Toast 通知创建新的视觉元素。
 
-## SYNTAX
+## 语法
 
 ```powershell
 New-BTVisual [-BindingGeneric] <ToastBindingGeneric> [-AddImageQuery] [[-BaseUri] <Uri>]
  [[-Language] <String>]
 ```
 
-## DESCRIPTION
+## 描述
 
-The New-BTVisual function creates a new visual element for toast notifications, which defines all of the visual aspects of a toast.
+New-BTVisual 函数为 Toast 通知创建一个新的视觉元素，该元素定义 Toast 的所有视觉方面。
 
 ## EXAMPLES
 

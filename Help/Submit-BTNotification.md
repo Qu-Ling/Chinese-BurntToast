@@ -1,32 +1,32 @@
 # Submit-BTNotification
 
-## SYNOPSIS
+## 作用
 
-Submits a completed toast notification for display.
+提交已完成的 气泡 通知以供显示。
 
-## SYNTAX
+## 语法
 
 ```powershell
 Submit-BTNotification [[-Content] <ToastContent>] [[-SequenceNumber] <UInt64>] [[-UniqueIdentifier] <String>] [[-AppId] <String>]
 ```
 
-## DESCRIPTION
+## 描述
 
-The Submit-BTNotification function submits a completed toast notification to the operating systems' notification manager for display.
+Submit-BTNotification 函数会将已有的 气泡 通知提交到操作系统的通知管理器进行显示。
 
-## EXAMPLES
+## 案例
 
-### -------------------------- EXAMPLE 1 --------------------------
+### -------------------------- 案例 1 --------------------------
 
 ```powershell
 PS C:\>Submit-BTNotification -Content $Toast1 -UniqueIdentifier 'Toast001'
 ```
 
-This command submits the complete toast content object $Toast1, from the New-BTContent function, and tags it with a unique identifier so that it can be replaced/updated.
+此命令从 New-BTContent 函数提交完整的 气泡 内容对象 $Toast 1，并使用唯一标识符对其进行标记，以便可以替换/更新它。
 
-## PARAMETERS
+## 参数
 
-### -AppId
+### -AppId 
 
 Specifies the AppId of the 'application' or process that spawned the toast notification.
 
@@ -42,9 +42,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Content
+### -Content 内容
 
-A Toast Content object which is the Base Toast element, created using the New-BTContent function.
+一个 Toast Content 对象，它是使用 New-BTContent 函数创建的 Base Toast 元素。
 
 ```yaml
 Type: ToastContent
