@@ -1,77 +1,73 @@
-# BurntToast Help
+# BurntToast 帮助
+## 描述
+用于在 Microsoft Windows 10 上创建和显示 气泡通知的模块
 
-## Description
-Module for creating and displaying Toast Notifications on Microsoft Windows 10.
-
-## BurntToast Functions
+## BurntToast 函数
 ### [New-BTAction](New-BTAction.md)
-The New-BTAction function creates an 'action' object which contains defines the controls displayed at the bottom of a Toast Notification.
+New-BTAction 函数创建一个“操作”对象，其中定义了显示在 Toast 通知底部的控件。
 
-Actions can either be system handeled and automatically localized Snooze and Dismiss buttons or a custom collection of inputs.
+操作可以是系统处理并自动本地化的“稍后提醒”和“关闭”按钮，也可以是自定义的输入集合。
 
 ### [New-BTAppId](New-BTAppId.md)
-The New-BTAppId function create a new AppId registry key in the Current User's Registery Hive. If the desired AppId is already present in the Registry then no changes are made.
+New-BTAppId 函数在当前用户的注册表项中创建一个新的 AppId 注册表键。如果所需的 AppId 已经存在于注册表中，则不会进行任何更改。
 
-If no AppId is specified then the AppId specified in the config.json file in the BurntToast module's root directory is used.
+如果没有指定 AppId，则使用 BurntToast 模块根目录中的 config.json 文件中指定的 AppId。
 
 ### [New-BTAudio](New-BTAudio.md)
-The New-BTAudioElement function creates a new Audio Element for Toast Notifications.
+New-BTAudioElement 函数为 Toast 通知创建一个新的音频元素。
 
-You can use the parameters of New-BTAudioElement to select an audio file or a standard notification sound (including alarms). Alternativly you can specify that a Toast Notification should be silent.
+你可以使用 New-BTAudioElement 的参数来选择音频文件或标准通知声音（包括警报）。或者，你可以指定 Toast 通知应为静音。
 
 ### [New-BTBinding](New-BTBinding.md)
-The New-BTBinding function creates a new Generic Toast Binding, where you provide text, images, and other visual elements for your Toast notification.
+New-BTBinding 函数创建一个新的通用 Toast 绑定，你可以在其中提供文本、图像和其他视觉元素用于你的 Toast 通知。
 
 ### [New-BTButton](New-BTButton.md)
-The New-BTButton function creates a new clickable button for a Toast Notification. Up to five buttons can be added to one Toast.
+New-BTButton 函数为 Toast 通知创建一个新的可点击按钮。一个 Toast 最多可以添加五个按钮。
 
-Buttons can be fully customized with display text, images and arguments or system handled 'Snooze' and 'Dismiss' buttons.
-
-### [New-BTContent](New-BTContent.md)
-The New-BTContent function creates a new Toast Content object which is the Base Toast element, which contains at least a visual element.
+按钮可以完全自定义显示文本、图像和参数，或者使用系统处理的“稍后提醒”和“关闭”按钮。
 
 ### [New-BTContextMenuItem](New-BTContextMenuItem.md)
-The New-BTContextMenuItem function creates a Context Menu Item object.
+New-BTContextMenuItem 函数创建一个上下文菜单项对象。
 
 ### [New-BTHeader](New-BTHeader.md)
-The New-BTHeader function creates a new toast notification header for a Toast Notification.
+New-BTHeader 函数为 Toast 通知创建一个新的通知标题。
 
-These headers are diaplyed at the top of a toast and are also used to categorize toasts in the Action Center.
+这些标题显示在 Toast 的顶部，并且也用于在操作中心对 Toast 进行分类。
 
 ### [New-BTImage](New-BTImage.md)
-The New-BTImageElement function creates a new Image Element for Toast Notifications.
+New-BTImageElement 函数为 Toast 通知创建一个新的图像元素。
 
-You can use the parameters of New-BTImageElement to specify the source image, alt text, placement on the Toast Notification and crop shape.
+你可以使用 New-BTImageElement 的参数来指定源图像、备用文本、在 Toast 通知中的放置位置和裁剪形状。
 
 ### [New-BTInput](New-BTInput.md)
-The New-BTInput function creates an input element on a Toast notification.
+New-BTInput 函数在 Toast 通知上创建一个输入元素。
 
-Returned object is either a TextBox for users to type text into or SelectionBox to users to select from a list of options.
+返回的对象可以是用户输入文本的文本框，也可以是用户从选项列表中选择的下拉框。
 
 ### [New-BTProgressBar](New-BTProgressBar.md)
-The New-BTProgressBar function creates a new Progress Bar Element for Toast Notifications.
+New-BTProgressBar 函数为 Toast 通知创建一个新的进度条元素。
 
-You must specify the status and value for the progress bar and can optionally give the bar a title and override the automatic text representiation of the progress.
+你必须指定进度条的状态和值，并且可以可选地给进度条一个标题，或者覆盖进度的自动文本表示。
 
 ### [New-BTSelectionBoxItem](New-BTSelectionBoxItem.md)
-The New-BTSelectionBoxItem function creates a selection box item, for inclusion in a selection box created with New-BTInput.
+New-BTSelectionBoxItem 函数创建一个选择框项，用于 New-BTInput 创建的选择框中。
 
 ### [New-BTText](New-BTText.md)
-The New-BTTextElement function creates a new Text Element for Toast Notifications.
+New-BTTextElement 函数为 Toast 通知创建一个新的文本元素。
 
-You can specify the text you want displayed in a Toast Notification as a string, or run the function without a paramter for a blank line.
+你可以指定要在 Toast 通知中显示的文本为字符串，或者在不带参数的情况下运行该函数以获取空白行。
 
-Each Text Element is the equivalent of one line in on a Toast Notification, long lines will wrap.
+每个文本元素相当于 Toast 通知中的一行，长行会自动换行。
 
 ### [New-BTVisual](New-BTVisual.md)
-The New-BTVisual function creates a new visual element for toast notifications, which defines all of the visual aspects of a toast.
+New-BTVisual 函数为 Toast 通知创建一个新的视觉元素，该元素定义了 Toast 的所有视觉方面。
 
 ### [New-BurntToastNotification](New-BurntToastNotification.md)
-The New-BurntToastNotification function creates and displays a Toast Notification on Microsoft Windows 10.
+New-BurntToastNotification 函数在 Microsoft Windows 10 上创建并显示一个 Toast 通知。
 
-You can specify the text and/or image displayed as well as selecting the sound that is played when the Toast Notification is displayed.
+你可以指定显示的文本和/或图像，以及选择显示 Toast 通知时播放的声音。
 
-You can optionally call the New-BurntToastNotification function with the Toast alias.
+你可以选择使用 Toast 别名调用 New-BurntToastNotification 函数。
 
 ### [Submit-BTNotification](Submit-BTNotification.md)
-The Submit-BTNotification function submits a completed toast notification to the operating systems' notification manager for display.
+Submit-BTNotification 函数将完成的 Toast 通知提交给操作系统的通知管理器进行显示。
