@@ -25,7 +25,7 @@ PS C:\>New-BTVisual -BindingGeneric $Binding1
 
 此命令将创建一个新的 Visual 元素，将以前配置的绑定元素作为输入。
 
-## PARAMETERS
+## 参数
 
 ### -AddImageQuery
 
