@@ -28,7 +28,9 @@ PS C:\>Submit-BTNotification -Content $Toast1 -UniqueIdentifier 'Toast001'
 
 ### -AppId 
 
-Specifies the AppId of the 'application' or process that spawned the toast notification.
+指定生成 toast 通知的“应用程序”或进程的 AppId。
+
+>(翻译著：通过查阅原仓库的issues得知，这个参数是用来修改Toset的名称：比如用的是powershell执行脚本，名字是Windows Powershell.该参数指定一个AppId来覆盖，详细信息请看这个：[自定义Appid](https://github.com/Windos/BurntToast/issues/236))
 
 ```yaml
 Type: String

@@ -242,7 +242,6 @@ Accept wildcard characters: False
 >（翻译著：使用该参数记得开通知提示声音）
 
 可选提示音：
-
 - 'Default'
 - 'IM'
 - 'Mail'
@@ -336,7 +335,7 @@ TODO
 
 You cannot pipe input to this function.
 
-## OUTPUTS 输出
+## 输出
 
 TODO
 

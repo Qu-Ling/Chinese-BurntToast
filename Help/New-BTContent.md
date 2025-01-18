@@ -37,7 +37,7 @@ PS C:\>$content1 = New-BTContent -Visual $visual1 -ActivationType Protocol -Laun
 
 ## 参数
 
-### -Actions
+### -Actions 操作
 
 （可选）使用按钮和输入创建自定义操作 （由New-BTAction生成对象.）
 
@@ -53,7 +53,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ActivationType
+### -ActivationType 激活类型
 
 指定当用户单击此Toast的正文时将使用的激活类型。
 
@@ -70,7 +70,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Audio
+### -Audio 音频
 
 指定自定义音频选项 （New-BTAudio.）
 
@@ -86,7 +86,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Duration
+### -Duration 显示时长
 
 Toast 应显示的时间。通常应该使用 Scenario 属性，因为该属性会影响 Toast 在屏幕上停留的时间。
 
@@ -103,7 +103,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Header
+### -Header 通知头
 
 创意者更新中的新增功能：指定 toast 通知的可选标头 （New-BTHeader.）
 
@@ -119,7 +119,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Launch
+### -Launch 
 
 当应用程序被 Toast 激活时传递给应用程序的字符串。此字符串的格式和内容由应用程序定义，供其自己使用。当用户点击或单击 Toast 以启动其关联的应用程序时，启动字符串会为应用程序提供上下文，使应用程序能够向用户显示与 Toast 内容相关的视图，而不是以默认方式启动。
 
@@ -135,7 +135,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Scenario
+### -Scenario 方案
 
 指定方案，使 Toast 的行为类似于闹钟、提醒等。
 
@@ -152,7 +152,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Visual
+### -Visual 视觉
 
 指定使用 New-BTVisual 函数创建的可视元素对象。
 
@@ -168,20 +168,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-## INPUTS
+## 输入
 
 TODO
 
-## OUTPUTS
+## 输出
 
 ToastContent
 
-## NOTES
+## 其他
 
-Credit for most of the help text for this function go to the authors of the UWPCommunityToolkit library that this module relies upon.
+此函数的大部分帮助文本都归功于本模块所依赖的 UWPCommunityToolkit 库的作者。
 
-Please see the Please see the [originating repo](https://github.com/windows-toolkit/WindowsCommunityToolkit).
+请参阅 [originating repo](https://github.com/windows-toolkit/WindowsCommunityToolkit).
 
-## RELATED LINKS
+## 其他链接
 
 [New-BTContent](https://github.com/Windos/BurntToast/blob/main/Help/New-BTContent.md)
