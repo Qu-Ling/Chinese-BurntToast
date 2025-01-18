@@ -2,15 +2,15 @@
 
 ## SYNOPSIS
 
-Creates a Context Menu Item object.
+创建 Context Menu Item 对象。
 
-## SYNTAX
+## 语法
 
 ```powershell
 New-BTContextMenuItem [-Content] <String> [-Arguments] <String> [[-ActivationType] <ToastActivationType>]
 ```
 
-## DESCRIPTION
+## 描述
 
 The New-BTContextMenuItem function creates a Context Menu Item object.
 

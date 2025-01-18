@@ -1,47 +1,49 @@
 # New-BTText
 
-## SYNOPSIS
+## 作用
 
-Creates a new Text Element for Toast Notifications.
+为 Toast 通知创建新的文本元素。
 
-## SYNTAX
+## 语法
 
 ```powershell
 New-BTText [[-Text] <String>] [[-MaxLines] <Int32>] [[-MinLines] <Int32>] [-Wrap]
  [[-Align] <AdaptiveTextAlign>] [[-Style] <AdaptiveTextStyle>] [[-Language] <String>]
 ```
 
-## DESCRIPTION
+## 描述
 
-The New-BTTextElement function creates a new Text Element for Toast Notifications.
+New-BTTextElement 函数为 Toast 通知创建新的文本元素。
 
-You can specify the text you want displayed in a Toast Notification as a string, or run the function without a paramter for a blank line.
+您可以将要在 Toast 通知中显示的文本指定为字符串，也可以运行不带空行参数的函数。
 
-Each Text Element is the equivalent of one line in on a Toast Notification, long lines will wrap.
+每个文本元素相当于 Toast 通知上的一行，长行将换行。
 
-## EXAMPLES
+>(翻译著：且第一行会默认加粗）
 
-### -------------------------- EXAMPLE 1 --------------------------
+## 案例
 
-```powershell
-PS C:\>New-BTTextElement -Content 'This is a line with text!'
-```
-
-Creates a Text Element that will show the string 'This is a line with text!' on a Toast Notification.
-
-### -------------------------- EXAMPLE 2 --------------------------
+### -------------------------- 案例 1 --------------------------
 
 ```powershell
-PS C:\>New-BTTextElement
+PS C:\>New-BTText -Content 'This is a line with text!'
 ```
 
-Creates a Text Element that will show a blank line on a Toast Notification.
+创建一个文本元素，该元素将在 Toast 通知上显示字符串 'This is a line with text！'
 
-## PARAMETERS
+### -------------------------- 案例 2 --------------------------
 
-### -Align
+```powershell
+PS C:\>New-BTText
+```
 
-The horizontal alignment of the text. Note that for Toast, this property will only take effect if the text is inside a group (not yet implemented.)
+创建一个文本元素，该元素将在 Toast 通知上显示空行。
+
+## 参数
+
+### -Align 水平对齐
+
+文本的水平对齐方式。请注意，对于 Toast，此属性仅在文本位于组内（尚未实现）时生效。
 
 ```yaml
 Type: AdaptiveTextAlign
@@ -56,9 +58,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Language
+### -Language 语言
 
-The target locale of the XML payload, specified as a BCP-47 language tags such as "en-US" or "fr-FR". The locale specified here overrides any other specified locale, such as that in binding or visual. If this value is a literal string, this attribute defaults to the user's UI language. If this value is a string reference, this attribute defaults to the locale chosen by Windows Runtime in resolving the string.
+XML 负载的目标区域设置，指定为 BCP-47 语言标记，如“en-US”或“fr-FR”。此处指定的区域设置将覆盖任何其他指定的区域设置，例如 binding 或 visual 中的区域设置。如果此值是文本字符串，则此属性默认为用户的 UI 语言。如果此值是字符串引用，则此属性默认为 Windows 运行时在解析字符串时选择的区域设置。
 
 ```yaml
 Type: String
@@ -72,11 +74,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -MaxLines
+### -MaxLines 最大行数
 
-The maximum number of lines the text element is allowed to display. For Toasts, top-level text elements will have varying max line amounts (and in the Anniversary Update you can change the max lines).
+允许文本元素显示的最大行数。对于 Toast，顶级文本元素将具有不同的最大行数（在Win10的周年更新中，您可以更改最大行数）。
 
-Text on a Toast inside a group (not yet implemented) will behave identically to Tiles (default to infinity).
+组内 Toast 上的文本（尚未实现）的行为将与 Tiles 相同（默认为无穷大）。
 
 ```yaml
 Type: Int32
@@ -90,9 +92,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -MinLines
+### -MinLines 最小行数
 
-The minimum number of lines the text element must display. Note that for Toast, this property will only take effect if the text is inside a group (not yet implemented.)
+文本元素必须显示的最小行数。请注意，对于 Toast，此属性仅在文本位于组内（尚未实现）时生效。
 
 ```yaml
 Type: Int32
@@ -106,9 +108,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Style
+### -Style 样式
 
-The style controls the text's font size, weight, and opacity. Note that for Toast, the style will only take effect if the text is inside a group (not yet implemented.)
+该样式控制文本的字体大小、粗细和不透明度。请注意，对于 Toast，仅当文本位于组内（尚未实现）时，该样式才会生效。
 
 ```yaml
 Type: AdaptiveTextStyle
@@ -123,9 +125,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Text
+### -Text 文本
 
-The text to display. Data binding support added in Creators Update, only works for toast top-level text elements (But appears to not be working via PowerShell yet.)
+要显示的文本。在 Creators Update 中添加的数据绑定支持仅适用于 toast 顶级文本元素（但似乎尚未通过 PowerShell 工作）。
 
 ```yaml
 Type: String
@@ -141,7 +143,7 @@ Accept wildcard characters: False
 
 ### -Wrap
 
-{{Fill Wrap Description}}
+{{填充换行描述}}
 
 ```yaml
 Type: SwitchParameter
@@ -155,17 +157,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-## INPUTS
+## 输入
 
 String
 
 You cannot pipe input to this function.
 
-## OUTPUTS
+## 输出
 
 AdaptiveText
 
-## NOTES
+## 其他
 
 TODO: Implement [hint-style](https://blogs.msdn.microsoft.com/tiles_and_toasts/2015/06/30/adaptive-tile-templates-schema-and-documentation/)
 
@@ -173,6 +175,6 @@ Credit for most of the help text for this function go to the authors of the UWPC
 
 Please see the [originating repo](https://github.com/Microsoft/UWPCommunityToolkit)
 
-## RELATED LINKS
+## 相关链接
 
 [New-BTText](https://github.com/Windos/BurntToast/blob/main/Help/New-BTText.md)

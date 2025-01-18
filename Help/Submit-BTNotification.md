@@ -60,9 +60,9 @@ Accept wildcard characters: False
 
 ### -SequenceNumber
 
-When updating toasts (not curently working) rapidly, the sequence number helps to ensure that toasts recieved out of order will not be displayed in a manner that may confuse.
+快速更新 Toast （当前未正常工作） 时，序列号有助于确保不按顺序接收的 Toast 不会以可能混淆的方式显示。
 
-A higher sequence number indicates a newer toast.
+序列号越高，表示 toast 越新。
 
 ```yaml
 Type: UInt64
@@ -76,11 +76,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -UniqueIdentifier
+### -UniqueIdentifier 唯一标识符
 
-A string that uniquely identifies a toast notification. Submitting a new toast with the same identifier as a previous toast will replace the previous toast.
+唯一标识 Toast 通知的字符串。提交与上一个 Toast 具有相同标识符的新 Toast 将替换上一个 Toast。
 
-This is useful when updating the progress of a process, using a progress bar, or otherwise correcting/updating the information on a toast.
+在更新进程进度、使用进度栏或以其他方式更正/更新 toast 上的信息时，这非常有用。
 
 ```yaml
 Type: String

@@ -1,10 +1,10 @@
 # New-BTBinding
 
-## SYNOPSIS
+## 作用
 
-Creates a new Generic Toast Binding object.
+创建新的通用Toast绑定对象。
 
-## SYNTAX
+## 语法
 
 ```powershell
 New-BTBinding [[-Children] <IToastBindingGenericChild[]>] [-AddImageQuery]
@@ -12,13 +12,13 @@ New-BTBinding [[-Children] <IToastBindingGenericChild[]>] [-AddImageQuery]
  [[-HeroImage] <ToastGenericHeroImage>] [[-Language] <String>]
 ```
 
-## DESCRIPTION
+## 描述
 
-The New-BTBinding function creates a new Generic Toast Binding, where you provide text, images, and other visual elements for your Toast notification.
+New-BTBinding 函数创建一个新的通用 Toast 绑定，您可以在其中为 Toast 通知提供文本、图像和其他视觉元素。
 
-## EXAMPLES
+## 案例
 
-### -------------------------- EXAMPLE 1 --------------------------
+### -------------------------- 案例 1 --------------------------
 
 ```powershell
 PS C:\>$text1 = New-BTText -Content 'This is a test'
@@ -31,13 +31,13 @@ PS C:\>$image3 = New-BTImage -Source 'C:\BurntToast\Media\BurntToast.png' -HeroI
 PS C:\>$binding1 = New-BTBinding -Children $text1, $text2, $text3, $image1, $progress -AppLogoOverride $image2 -HeroImage $image3
 ```
 
-This example uses various BurntToast functions to create a number of objects, and then create a Generic Toast Binding using them as inputs.
+此示例使用各种 BurntToast 函数创建多个对象，然后使用它们作为输入创建泛型 Toast 绑定。
 
-## PARAMETERS
+## 参数
 
-### -AddImageQuery
+### -AddImageQuery 添加图片查询
 
-Set to "true" to allow Windows to append a query string to the image URI supplied in the Toast notification. Use this attribute if your server hosts images and can handle query strings, either by retrieving an image variant based on the query strings or by ignoring the query string and returning the image as specified without the query string. This query string specifies scale, contrast setting, and language.
+设置为“true”以允许 Windows 将查询字符串附加到 Toast 通知中提供的图像 URI。如果您的服务器托管图像并且可以处理查询字符串，请使用此属性，方法是根据查询字符串检索图像变体，或者忽略查询字符串并返回指定的图像（不含查询字符串）。此查询字符串指定比例、对比度设置和语言。
 
 ```yaml
 Type: SwitchParameter
@@ -51,11 +51,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AppLogoOverride
+### -AppLogoOverride 覆盖通知图标
 
-An optional override of the logo displayed on the Toast notification.
-
-Created using the New-BTImage function with the 'AppLogoOverride' switch.
+Toast 通知上显示的图标的可选覆盖。
+后跟带有'-AppLogoOverride'的New-BTImage对象。
 
 ```yaml
 Type: ToastGenericAppLogo
@@ -69,11 +68,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Attribution
-
-New in Anniversary Update: An optional text element that is displayed as attribution text.
-
-On devices without the Anniversary Update, this text will appear as if it's another Text element at the end of your Children list.
+### Attribution 
 
 ```yaml
 Type: ToastGenericAttributionText
@@ -87,9 +82,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -BaseUri
+### -BaseUri 基础路径
 
-A default base URI that is combined with relative URIs in image source attributes.
+与图片路径中的 相对URI 组合的 默认基本URI。
 
 ```yaml
 Type: Uri

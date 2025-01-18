@@ -15,15 +15,15 @@ New-BTVisual [-BindingGeneric] <ToastBindingGeneric> [-AddImageQuery] [[-BaseUri
 
 New-BTVisual 函数为 Toast 通知创建一个新的视觉元素，该元素定义 Toast 的所有视觉方面。
 
-## EXAMPLES
+## 案例
 
-### -------------------------- EXAMPLE 1 --------------------------
+### -------------------------- 案例 1 --------------------------
 
 ```powershell
 PS C:\>New-BTVisual -BindingGeneric $Binding1
 ```
 
-This command creates a new Visual element taking a previously configured binding element as input.
+此命令将创建一个新的 Visual 元素，将以前配置的绑定元素作为输入。
 
 ## PARAMETERS
 
